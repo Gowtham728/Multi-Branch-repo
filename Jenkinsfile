@@ -1,23 +1,19 @@
 
-Jenkinsfile (Declarative Pipeline)
+
+
 
 pipeline {
-    agent any 
+    agent any
     stages {
-        stage('Build') { 
+        stage('Example') {
             steps {
-                // 
+                echo 'Hello World'
             }
         }
-        stage('Test') { 
-            steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
     }
 }
